@@ -41,6 +41,7 @@ img {
 }
 </style>
 </head>
+
 <body>
 
 <div class="card">
@@ -62,7 +63,6 @@ const questions = [
 
 let currentQuestion = 0;
 
-// GİRİŞ EKRANI
 function showStartPage() {
     document.getElementById("quiz").innerHTML = `
         <h1>💖 Derya 💖</h1>
@@ -116,11 +116,10 @@ function showLovePage() {
     document.getElementById("quiz").innerHTML = `
         <h2>📖 Bizim Hikayemiz 💖</h2>
 
-        <div style="text-align:left; line-height:1.8; max-height:500px; overflow-y:auto; padding-right:10px;">
+        <div style="text-align:left; line-height:1.9; max-height:500px; overflow-y:auto; padding-right:10px;">
             
             <p style="margin-bottom:40px;">
-derya pazartesi günü okul çıkışında bana istanbuldan benim için aldığı bardağı verdi (doğum günüm için) içinde notta vardı doğum günü o kadar da önem verdiğim bir şey değil ama birinin bana hediye alması bu kadar değer vermesi beni çok mutlu etti kıza karşı hoşlanma duygularım daha da arttı sarılıp öpesim falan var aşık mı oldum anlamadım notu hep saklamaya çalışacağım
-kız hala beni seviyor bana çok değer veriyor aslında bir gün bu yazıyı okur umarım sana şunu söylemek istiyorum eğer okursan bende senden hep hoşlandım
+derya pazartesi günü okul çıkışında bana istanbuldan benim için aldığı bardağı verdi (doğum günüm için) içinde notta vardı doğum günü o kadar da önem verdiğim bir şey değil ama birinin bana hediye alması bu kadar değer vermesi beni çok mutlu etti kıza karşı hoşlanma duygularım daha da arttı sarılıp öpesim falan var aşık mı oldum anlamadım notu hep saklamaya çalışacağım kız hala beni seviyor bana çok değer veriyor aslında bir gün bu yazıyı okur umarım sana şunu söylemek istiyorum eğer okursan bende senden hep hoşlandım
 9/02/23
             </p>
 
@@ -156,3 +155,8 @@ YANDA ANNEM YEMEK YAPIYOR
     `;
 }
 
+showStartPage();
+</script>
+
+</body>
+</html>

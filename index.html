@@ -66,7 +66,7 @@ let currentQuestion = 0;
 function showStartPage() {
     document.getElementById("quiz").innerHTML = `
         <h1>💖 Derya 💖</h1>
-        <h2>Sana olan yazılarımı görmek için testten geçmen gerekiyor 😍</h2>
+        <h2>Sana olan hediyemi görmek için soruları bilmen lazım yanlış bilme hakkın yokk</h2>
         <button onclick="startQuiz()">Hadi Başlayalım 💌</button>
     `;
 }
@@ -99,22 +99,22 @@ function checkAnswer(selected) {
             showFinal();
         }
     } else {
-        alert("Yanlış cevap 😢 Ama yine de seni çoooook seviyorum Derya ❤️");
+        alert("YUUUHHH AŞKIIMM :(( Beni  100 defa öpmek zorundasın artık");
     }
 }
 
 function showFinal() {
     document.getElementById("quiz").innerHTML = `
         <h2>🎉 Tebrikler Aşkım 🎉</h2>
-        <p>Demek ki beni gerçekten tanıyorsun...</p>
-        <h3>Derya, seni her şeyden çok seviyorum ❤️</h3>
+        <p>VAYYY Aferin kızz</p>
+        <h3>Seviyorsun herhalde beni unutmamışsınz bizi</h3>
         <button onclick="showLovePage()">DEVAM ET 💖</button>
     `;
 }
 
 function showLovePage() {
     document.getElementById("quiz").innerHTML = `
-        <h2>📖 Bizim Hikayemiz 💖</h2>
+        <h2>Bizim Hikayemiz</h2>
 
         <div style="text-align:left; line-height:1.9; max-height:500px; overflow-y:auto; padding-right:10px;">
             

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Derya için 💖</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    padding: 50px;
+}
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 550px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+h1 { color: #ff2a66; }
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff4b7d;
+    color: white;
+    transition: 0.3s;
+}
+button:hover { background-color: #ff2a66; }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>💖 Derya İçin Aşk Testi 💖</h1>
+    <div id="quiz"></div>
+</div>
+
+<script>
+const questions = [
+    {
+        question: "1️⃣ Biz hangisine gitmedik?",
+        options: ["Fethiye", "Kuşadası", "Aydın", "Denizli"],
+        answers: ["Fethiye"]
+    },
+    {
+        question: "2️⃣ İlk yemek yediğimiz yer?",
+        options: ["Morgis", "Burger King", "Prof Döner", "Aşkar"],
+        answers: ["Morgis"]
+    },
+    {
+        question: "3️⃣ İlk gittiğimiz sinema filmi?",
+        options: ["Dune2", "Moana2", "Zootopia2", "The Maymun"],
+        answers: ["Dune2"]
+    },
+    {
+        question: "4️⃣ Bana aldığın ilk hediye?",
+        options: ["Lamborghini araba", "Minyonlar bardak", "Kahverengi kazak", "İsmim yazılı bıçak"],
+        answers: ["Minyonlar bardak"]
+    },
+    {
+        question: "5️⃣ En çok hangisini seviyorsun?",
+        options: ["Altan", "Kola", "Makarna", "Elif"],
+        answers: ["Altan"]
+    },
+    {
+        question: "6️⃣ Altan’ı ne kadar çok seviyorsun?",
+        options: ["Az", "Orta", "Çok", "Aşığıııımmm"],
+        answers: ["Aşığıııımmm"]
+    },
+    {
+        question: "7️⃣ Altan ile evlenmek istiyor musun?",
+        options: ["Evet 💍", "Evettt 😍", "Tabii ki evet ❤️", "Kesinlikle evet 💖"],
+        acceptAny: true
+    },
+    {
+        question: "8️⃣ Sana aldığım ilk çiçek hangisi?",
+        options: ["Plastik lale", "Mor papatya", "Turuncu papatya", "Ayçiçeği"],
+        answers: ["Plastik lale"]
+    },
+    {
+        question: "9️⃣ Sevgili olmadan önce gittiğimiz kafede ne içtik?",
+        options: ["Salep", "Limonata", "Hibiscus", "Kahve"],
+        answers: ["Salep"]
+    }
+];
+
+let currentQuestion = 0;
+
+function loadQuestion() {
+    const quizDiv = document.getElementById("quiz");
+    const q = questions[currentQuestion];
+
+    let html = `<h2>${q.question}</h2>`;
+    q.options.forEach(option => {
+        html += `<button onclick="checkAnswer('${option}')">${option}</button>`;
+    });
+
+    quizDiv.innerHTML = html;
+}
+
+function checkAnswer(selected) {
+    const q = questions[currentQuestion];
+
+    if (q.acceptAny || q.answers.includes(selected)) {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            loadQuestion();
+        } else {
+            showFinal();
+        }
+    } else {
+        alert("Yanlış cevap 😢 Beni 5 defa öpmek zorundasın ❤️");
+    }
+}
+
+function showFinal() {
+    document.getElementById("quiz").innerHTML = `
+        <h2>🎉 Tebrikler Aşkım 🎉</h2>
+        <p>Demek ki beni gerçekten tanıyorsun...</p>
+        <h3>Derya, seni her şeyden çok seviyorum ❤️</h3>
+        <p>İyi ki varsın, iyi ki benimsin 💍</p>
+    `;
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>

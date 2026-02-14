@@ -208,17 +208,32 @@ YANDA ANNEM YEMEK YAPIYOR
     `;
 }
   
-    `;
-}
 
-    `;
-}
 
 function saveNote() {
     const text = document.getElementById("noteText").value;
     localStorage.setItem("askNotu", text);
     alert("Not kaydedildi 💖");
 }
+    function showNotePage() {
+    document.getElementById("quiz").innerHTML = `
+        <h2>📝 Sana Özel Notum</h2>
+
+        <div style="text-align:left; line-height:1.9; margin-top:20px;">
+            <p style="margin-bottom:30px;">
+                BURAYA DERYA İÇİN YAZACAĞIN ÖZEL NOT GELECEK 💖
+            </p>
+
+            <p style="margin-bottom:30px;">
+                İstersen uzun bir aşk mektubu yazabilirsin…
+                Bu sayfayı sadece o okuyacak 😍
+            </p>
+        </div>
+
+        <button onclick="showLovePage()">⬅ Geri Dön</button>
+    `;
+}
+
 
 showStartPage();
 </script>

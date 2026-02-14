@@ -210,6 +210,8 @@ YANDA ANNEM YEMEK YAPIYOR
     function showNotePage() {
     document.getElementById("quiz").innerHTML = `
         <h2>📝 Sana Yazmak İstediğim Not</h2>
+        document.getElementById("noteText").value = localStorage.getItem("askNotu") || "";
+
 
         <textarea id="noteText" 
             placeholder="Buraya yeni yazını yazabilirsin aşkım..."

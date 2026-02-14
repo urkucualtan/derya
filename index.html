@@ -209,16 +209,30 @@ YANDA ANNEM YEMEK YAPIYOR
 }
     function showNotePage() {
     document.getElementById("quiz").innerHTML = `
-        <h2>📝 Sana Yazmak İstediğim Not</h2>
-        
+        <h2>📝 Sana Özel Notum</h2>
 
+        <div style="text-align:left; line-height:1.9; margin-top:20px;">
+            <p style="margin-bottom:30px;">
+                Buraya sevgiline yazmak istediğin özel notu yazabilirsin...
+                Mesela onu ne kadar sevdiğini, onun hayatındaki yerini,
+                onunla ilgili en güzel hislerini 💖
+            </p>
 
-        <textarea id="noteText" 
-            placeholder="Buraya yeni yazını yazabilirsin aşkım..."
-            style="width:100%; height:200px; border-radius:15px; padding:15px; font-size:16px;"></textarea>
+            <p style="margin-bottom:30px;">
+                Bu sayfa tamamen ona özel olacak.
+                Testi geçince sadece bu yazıları okuyabilecek 😍
+            </p>
 
-      
+            <p style="margin-bottom:30px;">
+                İstersen buraya uzun bir aşk mektubu bile yazabilirsin...
+                O her okuduğunda seni tekrar tekrar hissedecek 💌
+            </p>
+        </div>
+
         <button onclick="showLovePage()">Geri Dön ❤️</button>
+    `;
+}
+
     `;
 }
 
